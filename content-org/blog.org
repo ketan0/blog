@@ -1,0 +1,17 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Blog
+#+HUGO_TAGS: emacs
+#+DATE: <2019-12-20 Fri>
+
+* Blog Posts
+** Test Post
+:PROPERTIES:
+:EXPORT_FILE_NAME: test-post
+:END:
+Hello, world
+
+Here's some code, just for fun:
+#+begin_src python
+for i in range(10):
+    print(f'Hello, welcome to the world ${i}')
+#+end_src

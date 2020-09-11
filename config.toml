@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Ketan Agrawal's Blog"
+theme = "archie"
+
+[params]
+  mode="auto"

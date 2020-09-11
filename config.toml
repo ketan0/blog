@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://www.blog.ketan.me/"
 languageCode = "en-us"
 title = "Ketan Agrawal's Blog"
 theme = "archie"

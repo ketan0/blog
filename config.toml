@@ -1,4 +1,4 @@
-baseURL = "http://www.blog.ketan.me/"
+baseURL = "https://www.blog.ketan.me/"
 languageCode = "en-us"
 title = "Ketan Agrawal's Blog"
 theme = "archie"

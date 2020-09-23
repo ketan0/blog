@@ -2,6 +2,7 @@ baseURL = "https://www.blog.ketan.me/"
 languageCode = "en-us"
 title = "Ketan Agrawal's Blog"
 theme = "book"
+disqusShortname = "ketan-blog"
 
 [params]
   BookTheme = "auto"

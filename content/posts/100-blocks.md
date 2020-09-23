@@ -2,7 +2,7 @@
 title = "100 Blocks a Day, quantified"
 author = ["Ketan Agrawal"]
 date = 2020-09-23T01:33:00-04:00
-lastmod = 2020-09-23T01:56:12-04:00
+lastmod = 2020-09-23T14:30:25-04:00
 tags = ["productivity", "projects"]
 draft = false
 math = true
@@ -43,7 +43,9 @@ I took the code from [this sample Messenger app](https://github.com/fbsamples/me
 
 ![Demonstrating the "quick reply" workflow in Messenger.](/ox-hugo/quick_reply_workflow.gif)
 
-After receiving the activity input from the user, I add a record to DynamoDB:
+After receiving the activity input from the user, we have to store it somewhere. My database of choice is [DynamoDB](https://aws.amazon.com/dynamodb/), as I'm familiar with the AWS SDK, and it's quite easy to use. So I created a new table in DynamoDB, with the [primary key](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.PrimaryKey) as the recorded user activity (e.g. Projects, Reading, etc.), and the [secondary index](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.CoreComponents.html#HowItWorks.CoreComponents.SecondaryIndexes) as time the user entered the input (in ISO format.) Using a secondary index or sort key of timestamp will enable me to efficiently filter by timestamp in the future -- say, if I wanted to pull only the last day or week's entries for a daily review.
+
+I add a record to DynamoDB as such:
 
 ```js
 function addActivityToDatabase(activity) {

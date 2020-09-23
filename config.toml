@@ -1,7 +1,7 @@
 baseURL = "https://www.blog.ketan.me/"
 languageCode = "en-us"
 title = "Ketan Agrawal's Blog"
-theme = "archie"
+theme = "book"
 
 [params]
-  mode="auto"
+  BookTheme = "auto"
